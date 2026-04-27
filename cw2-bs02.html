@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청원고 생명과학 기출 분석 2023~2025</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=JetBrains+Mono:wght@500;700&display=swap');
+
+:root {
+  --bg: #f5f6f8;
+  --bg2: #ffffff;
+  --bg3: #eef0f4;
+  --border: #d8dce6;
+  --text: #1a1e2e;
+  --muted: #5a6478;
+  --blue: #1a6fd4;
+  --green: #1a8c5a;
+  --orange: #c96a00;
+  --red: #c0282c;
+  --purple: #6b3fc4;
+  --teal: #0d7a6e;
+  --yellow: #b07800;
+  --blue-bg: #e8f0fb;
+  --green-bg: #e6f5ee;
+  --orange-bg: #fdf0e0;
+  --red-bg: #fce8e8;
+  --purple-bg: #f0ebfa;
+  --teal-bg: #e5f5f3;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ── HEADER ── */
+header {
+  background: #fff;
+  border-bottom: 3px solid var(--blue);
+  padding: 28px 48px 22px;
+}
+.hdr-label {
+  font-size: 11px; letter-spacing: 2px;
+  color: var(--blue); text-transform: uppercase;
+  font-weight: 700; margin-bottom: 6px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+header h1 {
+  font-size: 24px; font-weight: 900;
+  color: var(--text); margin-bottom: 5px;
+  letter-spacing: -0.3px;
+}
+header .sub { color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+.pill-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.pill {
+  padding: 4px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 700; border: 1.5px solid;
+}
+.pill-blue { color: var(--blue); border-color: var(--blue); background: var(--blue-bg); }
+.pill-red  { color: var(--red);  border-color: var(--red);  background: var(--red-bg); }
+.pill-orange { color: var(--orange); border-color: var(--orange); background: var(--orange-bg); }
+.pill-green  { color: var(--green);  border-color: var(--green);  background: var(--green-bg); }
+
+/* ── NAV ── */
+nav {
+  background: #fff;
+  border-bottom: 2px solid var(--border);
+  display: flex; overflow-x: auto;
+  padding: 0 48px;
+}
+nav button {
+  background: none; border: none;
+  padding: 14px 20px; font-size: 14px; font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--muted); cursor: pointer;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap; transition: all .2s; margin-bottom: -2px;
+}
+nav button:hover { color: var(--text); }
+nav button.on { color: var(--blue); border-bottom-color: var(--blue); }
+
+/* ── MAIN ── */
+main { max-width: 1040px; margin: 0 auto; padding: 32px 48px 80px; }
+.sec { display: none; }
+.sec.on { display: block; }
+
+/* ── HEADINGS ── */
+.sh {
+  font-size: 18px; font-weight: 900; color: var(--text);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 10px; margin: 32px 0 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.sh:first-child { margin-top: 0; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.sh2 {
+  font-size: 15px; font-weight: 900; color: var(--text);
+  margin: 20px 0 10px; padding-left: 10px;
+  border-left: 4px solid var(--blue);
+}
+
+/* ── GRID ── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+/* ── CARD ── */
+.card {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 18px 20px;
+}
+.card-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 14px; font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* ── FREQUENCY BARS ── */
+.frow { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.flabel { font-size: 14px; font-weight: 700; color: var(--text); min-width: 200px; }
+.fbar-w { flex: 1; background: var(--bg3); border-radius: 4px; height: 8px; }
+.fbar { height: 100%; border-radius: 4px; }
+.fcount { min-width: 120px; text-align: right; }
+
+/* ── BADGE ── */
+.badge {
+  display: inline-block; padding: 3px 10px; border-radius: 5px;
+  font-size: 12px; font-weight: 700; border: 1.5px solid;
+}
+.b-red    { background: var(--red-bg);    color: var(--red);    border-color: #e8a0a0; }
+.b-blue   { background: var(--blue-bg);   color: var(--blue);   border-color: #a0b8e8; }
+.b-orange { background: var(--orange-bg); color: var(--orange); border-color: #e8c080; }
+.b-green  { background: var(--green-bg);  color: var(--green);  border-color: #80c8a0; }
+.b-purple { background: var(--purple-bg); color: var(--purple); border-color: #b8a0e0; }
+.b-teal   { background: var(--teal-bg);   color: var(--teal);   border-color: #80c0b8; }
+
+/* ── ALERT ── */
+.alert {
+  border-radius: 8px; padding: 14px 18px;
+  margin-bottom: 14px; font-size: 14px;
+  border-left: 4px solid; line-height: 1.75;
+}
+.a-red    { background: var(--red-bg);    border-color: var(--red); }
+.a-blue   { background: var(--blue-bg);   border-color: var(--blue); }
+.a-orange { background: var(--orange-bg); border-color: var(--orange); }
+.a-green  { background: var(--green-bg);  border-color: var(--green); }
+.a-purple { background: var(--purple-bg); border-color: var(--purple); }
+.alert strong {
+  display: block; font-size: 12px; letter-spacing: 1px;
+  text-transform: uppercase; font-family: 'Noto Sans KR', sans-serif;
+  margin-bottom: 5px; font-weight: 700;
+}
+
+/* ── TABLE ── */
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin-bottom: 16px; }
+th {
+  background: var(--bg3); color: var(--muted);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+  padding: 10px 14px; text-align: left;
+  border-bottom: 2px solid var(--border);
+}
+td {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  vertical-align: top; color: var(--text);
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f8f9fb; }
+
+/* ── BOX LIST ── */
+.blist { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+.bitem {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 13px 16px; font-size: 14px;
+}
+.bitem-num {
+  font-family: 'Noto Sans KR', sans-serif; font-size: 13px;
+  color: var(--blue); min-width: 28px; font-weight: 700; margin-top: 1px;
+}
+
+/* ── FORMULA BOX ── */
+.fmbox {
+  background: #f8f9fc; border: 1.5px solid var(--border);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 14px;
+  font-family: 'Noto Sans KR', sans-serif; font-size: 14px;
+  line-height: 2.2; color: var(--text);
+  white-space: pre-wrap;
+}
+.fmbox .key  { color: var(--teal);   font-weight: 700; }
+.fmbox .val  { color: var(--blue);   font-weight: 700; }
+.fmbox .eq   { color: var(--orange); font-weight: 700; }
+
+/* ── TRAP CARD ── */
+.trap {
+  background: var(--red-bg);
+  border: 1.5px solid #e8a0a0;
+  border-left: 5px solid var(--red);
+  border-radius: 8px; padding: 14px 18px; margin-bottom: 12px;
+}
+.trap-head {
+  font-size: 13px; color: var(--red);
+  font-weight: 900; margin-bottom: 6px;
+  display: flex; align-items: center; gap: 6px;
+}
+.trap p { font-size: 14px; line-height: 1.8; color: var(--text); }
+
+/* ── CONCEPT BOX ── */
+.cbox {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 10px; padding: 18px 20px; margin-bottom: 16px;
+}
+.cbox-head {
+  font-size: 15px; font-weight: 900; color: var(--text);
+  margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+}
+.cbox ul { padding-left: 20px; }
+.cbox li { font-size: 14px; margin-bottom: 5px; }
+
+/* ── HIGHLIGHT ── */
+.hl-blue   { color: var(--blue);   font-weight: 900; }
+.hl-red    { color: var(--red);    font-weight: 900; }
+.hl-green  { color: var(--green);  font-weight: 900; }
+.hl-orange { color: var(--orange); font-weight: 900; }
+.hl-teal   { color: var(--teal);   font-weight: 900; }
+.hl-purple { color: var(--purple); font-weight: 900; }
+
+/* ── STAR ── */
+.star { color: #c49a00; font-size: 15px; }
+
+/* ── MEMO ── */
+.memo {
+  background: #fffbea; border: 1.5px solid #e8d880;
+  border-radius: 8px; padding: 12px 16px; font-size: 13.5px;
+  margin-top: 10px; margin-bottom: 4px; line-height: 1.75;
+  color: #5a4a00;
+}
+
+/* ── KEY BOX (중요 암기박스) ── */
+.keybox {
+  background: var(--blue-bg); border: 2px solid var(--blue);
+  border-radius: 10px; padding: 16px 20px; margin-bottom: 14px;
+  font-size: 15px; font-weight: 700; color: var(--text);
+  line-height: 2;
+}
+.keybox .krow {
+  display: flex; gap: 8px; align-items: center; margin-bottom: 4px;
+}
+.keybox .karrow {
+  color: var(--blue); font-weight: 900; font-size: 18px;
+}
+
+hr.div { border: none; border-top: 2px solid var(--border); margin: 24px 0; }
+
+/* ── TRAP COMPARISON CARD ── */
+.tc {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 10px; margin-bottom: 12px; overflow: hidden;
+}
+.tc-hdr {
+  display: flex; align-items: center; gap: 10px;
+  padding: 11px 16px; background: var(--bg3);
+  border-bottom: 1.5px solid var(--border);
+}
+.tc-num {
+  font-size: 12px; font-weight: 700; background: var(--red);
+  color: #fff; border-radius: 20px; padding: 2px 10px; flex-shrink: 0;
+}
+.tc-title { font-size: 14px; font-weight: 700; color: var(--text); flex: 1; }
+.tc-freq { font-size: 12px; color: var(--muted); flex-shrink: 0; }
+.tc-body {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+}
+.tc-col {
+  padding: 13px 15px; font-size: 13.5px; line-height: 1.75;
+  color: var(--text);
+}
+.tc-col + .tc-col { border-left: 1.5px solid var(--border); }
+.tc-ok  { background: #eef5ff; }
+.tc-bad { background: #fff3f3; }
+.tc-why { background: #eef8f2; }
+.tc-clabel {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
+  text-transform: uppercase; margin-bottom: 7px;
+  padding-bottom: 5px; border-bottom: 1.5px solid;
+}
+.tc-ok  .tc-clabel { color: var(--blue);  border-color: #a0b8e8; }
+.tc-bad .tc-clabel { color: var(--red);   border-color: #e8a0a0; }
+.tc-why .tc-clabel { color: var(--green); border-color: #80c8a0; }
+.tc-x { color: var(--red); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-label">CHEONGWON HIGH SCHOOL · 생명과학 기출 통합 분석</div>
+  <h1>청원고 생명과학 출제경향 분석 보고서</h1>
+  <div class="sub">2023~2025학년도 1·2학기 중간고사 6회 전수 분석 | 2022개정 현재 시험범위 기준</div>
+  <div class="pill-row">
+    <span class="pill pill-blue">분석 시험: 6회</span>
+    <span class="pill pill-red">⚠ 함정·오답 패턴 포함</span>
+    <span class="pill pill-orange">서답형 예측 포함</span>
+    <span class="pill pill-green">필수 개념 정리 포함</span>
+  </div>
+</header>
+
+<nav>
+  <button class="on" onclick="go('overview',this)">① 출제 빈도 분석</button>
+  <button onclick="go('trap',this)">② 함정·오답 패턴</button>
+  <button onclick="go('concept',this)">③ 필수 개념 정리</button>
+  <button onclick="go('essay',this)">④ 서답형 분석·예측</button>
+  <button onclick="go('check',this)">⑤ 최종 점검 리스트</button>
+</nav>
+
+<main>
+
+<!-- ═══════════════════════════
+  ① 출제 빈도 분석
+═══════════════════════════ -->
+<div id="overview" class="sec on">
+
+  <div class="sh"><span class="dot" style="background:var(--blue)"></span>단원별 출제 빈도 (6회 기준)</div>
+
+  <div class="alert a-blue">
+    <strong>분석 기준</strong>
+    2023·2024·2025학년도 1·2학기 중간고사 총 6회, 선택형+서답형 전 문항 분석. 이번 시험 범위(2022개정)인 <strong>생명과학의 이해 / 물질대사 / 생태계 / 자극에 대한 반응과 항상성</strong> 해당 문항만 추려 정리.
+  </div>
+
+  <div class="sh2">▸ 대단원별 빈도</div>
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-label">출제 횟수 (선택형+서답형 합산)</div>
+    <div class="frow">
+      <div class="flabel">⚡ 신경·전도·시냅스</div>
+      <div class="fbar-w"><div class="fbar" style="width:100%;background:#c0282c"></div></div>
+      <div class="fcount"><span class="badge b-red">매회 3~5문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">💪 근육 수축 (근섬유 마디)</div>
+      <div class="fbar-w"><div class="fbar" style="width:95%;background:#c0282c"></div></div>
+      <div class="fcount"><span class="badge b-red">매회 2~3문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">🧬 항상성 (혈당·체온·삼투)</div>
+      <div class="fbar-w"><div class="fbar" style="width:90%;background:#c96a00"></div></div>
+      <div class="fcount"><span class="badge b-orange">매회 3~4문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">🧠 신경계 구조·기능</div>
+      <div class="fbar-w"><div class="fbar" style="width:85%;background:#c96a00"></div></div>
+      <div class="fcount"><span class="badge b-orange">매회 2~3문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">⚗️ 물질대사·ATP·기관계</div>
+      <div class="fbar-w"><div class="fbar" style="width:80%;background:#1a6fd4"></div></div>
+      <div class="fcount"><span class="badge b-blue">매회 2~3문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">🔬 생명과학의 이해·탐구방법</div>
+      <div class="fbar-w"><div class="fbar" style="width:65%;background:#1a6fd4"></div></div>
+      <div class="fcount"><span class="badge b-blue">매회 1~2문항</span></div>
+    </div>
+    <div class="frow">
+      <div class="flabel">🌿 생태계 (2022개정 신규)</div>
+      <div class="fbar-w"><div class="fbar" style="width:25%;background:#1a8c5a"></div></div>
+      <div class="fcount"><span class="badge b-green">이번 첫 출제</span></div>
+    </div>
+  </div>
+
+  <div class="sh2">▸ 소단원별 출제 빈도 상세</div>
+  <table>
+    <tr><th>소단원 (현재 시험범위)</th><th>6회 중 출제</th><th>주요 형태</th><th>중요도</th></tr>
+    <tr><td><strong>흥분 전도 속도 계산 (민말이집)</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>고배점 선택형 + <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 단골</span></td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td><strong>막전위 변화 (탈분극·재분극·과분극)</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>선택형 + 서답형</td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td><strong>근육 원섬유 마디 X 길이 계산</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>고배점 선택형 + <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 단골</span></td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td><strong>ADH·삼투압 조절</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>선택형 보기형</td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td><strong>혈당 조절 (인슐린·글루카곤·당뇨)</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>선택형 + 서답형</td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td><strong>자율신경 (교감·부교감·신경전달물질)</strong></td><td>6/6 <span class="badge b-red">매회</span></td><td>선택형 + 서답형</td><td><span class="star">★★★★★</span></td></tr>
+    <tr><td>체온 조절 (시상하부·피부혈관·땀)</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>티록신 분비 조절 (음성피드백·TRH·TSH)</td><td>5/6</td><td>선택형 + 서답형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>중추신경계 구조 (간뇌·연수·소뇌·중간뇌)</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>기관계 통합 작용 (소화·순환·배설·호흡)</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>Na⁺·K⁺ 이온 막 투과도·이동</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>탐구 방법 (귀납·연역·변인)</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>ATP·ADP 전환·이화·동화</td><td>5/6</td><td>선택형</td><td><span class="star">★★★★☆</span></td></tr>
+    <tr><td>바이러스·대장균·아메바 분류</td><td>4/6</td><td>선택형</td><td><span class="star">★★★☆☆</span></td></tr>
+    <tr><td>뉴런 구조 (말이집·랑비에·시냅스 소포)</td><td>4/6</td><td>선택형</td><td><span class="star">★★★☆☆</span></td></tr>
+    <tr><td>노폐물 생성·배출 (요소·CO₂·암모니아)</td><td>4/6</td><td>선택형</td><td><span class="star">★★★☆☆</span></td></tr>
+    <tr><td>효모 발효관 실험 (이화작용 확인)</td><td>3/6</td><td>선택형</td><td><span class="star">★★★☆☆</span></td></tr>
+    <tr><td>생태계·개체군·군집 (2022개정 신규)</td><td>0/6 — 이번 첫 출제 예상</td><td>선택형</td><td><span class="star">★★★☆☆</span></td></tr>
+  </table>
+
+  <div class="alert a-orange">
+    <strong>⚠ 이번 시험 특이사항</strong>
+    2022개정에 <strong>생태계(I-3단원)</strong>가 새로 포함됨. 기출에 없던 단원이라 교과서 기본 개념 위주로 1~2문항 예상. 고난도·고배점 문항은 기존과 동일하게 <strong>흥분 전도·근육 수축·항상성</strong>에서 나올 것.
+  </div>
+
+  <div class="sh2">▸ 시험 형식 패턴 (6회 동일)</div>
+  <div class="g2">
+    <div class="card">
+      <div class="card-label">문항 구성 (고정)</div>
+      <ul style="padding-left:18px;font-size:15px;line-height:2.2">
+        <li>선택형: <strong>20문항</strong></li>
+        <li>단답형 / 서답형: <strong>6문항</strong></li>
+        <li>총 26~29문항</li>
+        <li>만점: <strong>100점</strong></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-label">배점 분포</div>
+      <ul style="padding-left:18px;font-size:15px;line-height:2.2">
+        <li>선택형 저배점: 3.0~3.3점</li>
+        <li>선택형 고배점: <strong>3.5~3.7점</strong></li>
+        <li>단답형: 각 1~3점</li>
+        <li>서술형: <strong>4~9점</strong> (조건 서술)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════
+  ② 함정·오답 패턴
+═══════════════════════════ -->
+<div id="trap" class="sec">
+
+  <div class="sh"><span class="dot" style="background:var(--red)"></span>반복 출제된 함정·오답 유도 패턴</div>
+
+  <div class="alert a-red">
+    <strong>⚠ 중요</strong>
+    아래 15개는 실제 기출 보기에서 반복 확인된 함정만 기재. 파란 열 = 정상 개념, 빨간 열 = 오답 유도 내용, 초록 열 = 왜 틀렸나.
+  </div>
+
+  <!-- 열 머리글 범례 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-bottom:6px;padding:0 2px;">
+    <div style="font-size:12px;font-weight:700;color:var(--blue);padding:6px 14px;background:var(--blue-bg);border-radius:6px 0 0 6px;border:1.5px solid #a0b8e8;border-right:none;">✔ 정상 개념</div>
+    <div style="font-size:12px;font-weight:700;color:var(--red);padding:6px 14px;background:var(--red-bg);border:1.5px solid #e8a0a0;border-right:none;">✘ 오답 유도 내용</div>
+    <div style="font-size:12px;font-weight:700;color:var(--green);padding:6px 14px;background:var(--green-bg);border-radius:0 6px 6px 0;border:1.5px solid #80c8a0;">! 왜 틀렸나</div>
+  </div>
+
+  <div class="sh2" style="margin-top:20px;">▸ 흥분 전도·막전위 파트</div>
+
+  <!-- 함정 ① -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ①</span>
+      <span class="tc-title">시냅스 전달 방향</span>
+      <span class="tc-freq">6/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        시냅스 전달은 <strong>축삭돌기 말단 → 다음 뉴런 가지돌기</strong> 방향으로만 가능. 역방향 전달은 구조적으로 불가.
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "㉠에 자극을 주면 시냅스 이전 방향으로도 흥분이 전달된다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        수용체가 <strong>시냅스 후 뉴런에만</strong> 존재. 신경전달물질이 이전 방향으로 작용할 수용체가 없음.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ② -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ②</span>
+      <span class="tc-title">-80mV의 상태 혼동</span>
+      <span class="tc-freq">6/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        −70mV = 휴지전위<br>
+        <strong>−80mV = 과분극</strong> (K⁺ 과잉 유출)<br>
+        +30mV = 탈분극 최고점
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "−80mV이므로 휴지 상태이다" <span class="tc-x">→ 오답</span><br><br>
+        "−80mV일 때 안정 상태이다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        휴지전위는 정확히 <strong>−70mV</strong>. −80mV는 K⁺ 과잉 유출된 과분극. 휴지 상태가 아님.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ③ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ③</span>
+      <span class="tc-title">전도 속도 계산 시 1ms 빼기 누락</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        속도 = 거리 ÷ (경과시간 − 막전위 변화까지 걸린 시간)<br><br>
+        예) 4ms 경과, +30mV → 이동시간 = <strong>4−1 = 3ms</strong>
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        1ms를 빼지 않고 4ms로 그대로 나눔<br>
+        → 6cm ÷ 4ms = 1.5cm/ms <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        +30mV 도달까지 <strong>약 1ms</strong> 소요됨. 경과시간에서 반드시 빼야 이동 시간 산출 가능. 정답: 6cm ÷ 3ms = 2cm/ms
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ④ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ④</span>
+      <span class="tc-title">Na⁺·K⁺ 이온 종류 혼동</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        막 투과도 그래프에서<br>
+        먼저 올라가는 것 = <strong>Na⁺</strong> (탈분극)<br>
+        나중에 올라가는 것 = <strong>K⁺</strong> (재분극)
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        ㉠·㉡이 어느 이온인지 확정 안 한 채로 "㉠이 세포 밖으로 이동한다" 판단 <span class="tc-x">→ 오류 가능</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        이온 종류 먼저 확정 필수. Na⁺는 탈분극 시 세포 <strong>안으로</strong> 이동. K⁺는 재분극 시 세포 <strong>밖으로</strong> 이동.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑤ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑤</span>
+      <span class="tc-title">이온 통로 vs Na⁺-K⁺ 펌프 — ATP 사용 여부</span>
+      <span class="tc-freq">4/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        이온 통로 = <strong>ATP 불필요</strong> (확산, 농도 기울기)<br>
+        Na⁺-K⁺ 펌프 = <strong>ATP 필요</strong> (능동수송)
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "이온 통로를 통해 K⁺가 이동할 때 ATP가 사용된다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        이온 통로는 <strong>농도 기울기</strong>에 따른 이동. 에너지 소모 없음. ATP는 펌프(능동수송)에만 사용.
+      </div>
+    </div>
+  </div>
+
+  <div class="sh2">▸ 근육 수축 파트</div>
+
+  <!-- 함정 ⑥ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑥</span>
+      <span class="tc-title">A대 길이가 수축 시 변한다</span>
+      <span class="tc-freq">6/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        A대 길이는 수축·이완 관계없이 <strong>항상 1.6μm로 고정</strong>. I대(㉠)와 H대(㉢)만 변함.
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "근육이 수축하면 A대의 길이가 짧아진다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        A대 = 마이오신 필라멘트 전체 길이. 수축 시 액틴이 마이오신 <strong>안으로 미끄러져</strong> 들어오지만 마이오신 자체 길이는 불변.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑦ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑦</span>
+      <span class="tc-title">ⓐ·ⓑ·ⓒ와 ㉠·㉡·㉢ 대응 혼동</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        주어진 조건으로 <strong>대응관계 확정 먼저</strong> → 그 후 계산<br><br>
+        A대 = 2×㉡ + 2×㉢ = 1.6μm
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        ⓐ~ⓒ를 "순서 없이" 제시. 대응관계 미확정 상태로 계산 <span class="tc-x">→ 엉뚱한 값 도출</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        ⓐ~ⓒ와 ㉠~㉢의 매핑은 매번 다름. 반드시 <strong>대응 먼저 확정</strong>한 뒤 공식 적용.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑧ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑧</span>
+      <span class="tc-title">수축·이완 방향 판단 오류</span>
+      <span class="tc-freq">4/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        X 길이 감소 → <strong>수축</strong><br>
+        X 길이 증가 → <strong>이완</strong><br>
+        ㉠·㉢ 모두 같은 방향으로 변함
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        t₁→t₂로 X 길이 감소 시 "근육이 이완된다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        X 길이 감소 = 수축. ㉠(I대 절반)과 ㉢(H대 절반)이 <strong>동시에 감소</strong>하는지 확인하면 방향 판단 가능.
+      </div>
+    </div>
+  </div>
+
+  <div class="sh2">▸ 항상성 파트</div>
+
+  <!-- 함정 ⑨ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑨</span>
+      <span class="tc-title">ADH와 오줌량·삼투압 방향 혼동</span>
+      <span class="tc-freq">6/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        ADH↑ → 수분 재흡수↑ → <strong>오줌량↓, 오줌삼투압↑</strong><br><br>
+        혈장삼투압↑ → ADH↑
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "ADH 농도가 높을 때 오줌 생성량이 많다" <span class="tc-x">→ 오답</span><br><br>
+        "혈장삼투압↑이면 ADH↓" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        ADH는 콩팥에서 <strong>수분 재흡수를 늘림</strong>. 오줌이 농축되고 양은 줄어듦. 선지는 방향이 정반대.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑩ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑩</span>
+      <span class="tc-title">인슐린·글루카곤 분비 세포 혼동</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        <strong>β세포 → 인슐린</strong> (혈당↑ 시)<br>
+        <strong>α세포 → 글루카곤</strong> (혈당↓ 시)
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "α세포에서 인슐린이 분비된다" <span class="tc-x">→ 오답</span><br><br>
+        1형 당뇨 = 수용체 이상이라 서술 <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        1형 = <strong>β세포 파괴</strong> (인슐린 분비 불가)<br>
+        2형 = <strong>수용체 이상</strong><br>세포와 호르몬 대응 정확히 구분 필수.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑪ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑪</span>
+      <span class="tc-title">티록신 음성 피드백 방향 혼동</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        티록신↑ → <strong>TRH·TSH 분비 억제</strong><br><br>
+        갑상샘 저하증: 티록신↓ → TSH↑<br>
+        갑상샘 항진증: 티록신↑ → TSH↓
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "티록신이 증가하면 TRH 분비가 촉진된다" <span class="tc-x">→ 오답</span><br><br>
+        TSH·티록신 농도표로 환자 유형 오매칭
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        음성 피드백은 <strong>억제</strong> 방향. 티록신이 높으면 TRH와 TSH 모두 억제. 반대 방향으로 착각 유도.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑫ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑫</span>
+      <span class="tc-title">교감신경 신경절 이후 신경전달물질 혼동</span>
+      <span class="tc-freq">5/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        교감 이전 말단 = 아세틸콜린<br>
+        교감 이후 말단 = <strong>노르에피네프린</strong><br>
+        부교감 이전·이후 = <strong>아세틸콜린</strong>
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "교감신경 신경절 이후 말단에서 아세틸콜린이 분비된다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        교감신경 이후 말단만 <strong>노르에피네프린</strong>. 이전 말단은 교감도 아세틸콜린이라 혼동 유발. 이후 말단만 다름.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑬ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑬</span>
+      <span class="tc-title">저온 자극 시 피부 혈관 반응 혼동</span>
+      <span class="tc-freq">4/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        저온 → 피부혈관 <strong>수축</strong> (교감신경) → 열 발산↓<br>
+        고온 → 피부혈관 <strong>확장</strong> → 열 발산↑
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        "저온 자극 시 피부 혈관이 확장된다" <span class="tc-x">→ 오답</span><br><br>
+        "피부 혈관 수축에 부교감신경이 관여한다" <span class="tc-x">→ 오답</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        피부 혈관 수축은 <strong>교감신경</strong>이 관여. 저온에서 열 보존을 위해 수축. 확장이 아니며, 신경 종류도 반대로 제시.
+      </div>
+    </div>
+  </div>
+
+  <!-- 함정 ⑭ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑭</span>
+      <span class="tc-title">길항 작용 vs 음성 피드백 구분</span>
+      <span class="tc-freq">3/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        길항 = 두 호르몬이 <strong>반대 방향</strong>으로 작용 (인슐린↔글루카곤)<br>
+        음성 피드백 = 호르몬이 자신의 <strong>분비를 억제</strong>
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        그림에서 길항과 음성 피드백을 서로 바꿔서 선지 구성 <span class="tc-x">→ 혼동 유도</span>
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        길항은 <strong>두 호르몬의 관계</strong>, 음성 피드백은 <strong>한 호르몬이 자신을 조절</strong>하는 원리. 그림 구조 보고 판단.
+      </div>
+    </div>
+  </div>
+
+  <div class="sh2">▸ 탐구 방법 파트</div>
+
+  <!-- 함정 ⑮ -->
+  <div class="tc">
+    <div class="tc-hdr">
+      <span class="tc-num">함정 ⑮</span>
+      <span class="tc-title">조작변인 vs 통제변인 혼동</span>
+      <span class="tc-freq">4/6회 반복</span>
+    </div>
+    <div class="tc-body">
+      <div class="tc-col tc-ok">
+        <div class="tc-clabel">정상 개념</div>
+        조작변인 = <strong>의도적으로 다르게</strong> 설정 (처리 여부, 농도)<br>
+        통제변인 = <strong>동일하게 유지</strong> (온도, pH 등)
+      </div>
+      <div class="tc-col tc-bad">
+        <div class="tc-clabel">오답 유도 내용</div>
+        온도를 고정한 실험에서 "온도는 조작변인이다" <span class="tc-x">→ 오답</span> (통제변인임)
+      </div>
+      <div class="tc-col tc-why">
+        <div class="tc-clabel">왜 틀렸나</div>
+        조작변인은 실험에서 <strong>실제로 다르게 설정한 것</strong>만 해당. 동일하게 맞춘 온도는 통제변인.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════
+  ③ 필수 개념 정리
+═══════════════════════════ -->
+<div id="concept" class="sec">
+
+  <div class="sh"><span class="dot" style="background:var(--green)"></span>꼭 암기해야 할 필수 개념 <span style="font-size:13px;font-weight:500;color:var(--muted);margin-left:6px;">— 청원고 6회 기출 분석 기반, 암기·이해 필수 사항</span></div>
+
+  <!-- A. 흥분 전도 -->
+  <div class="sh2">▸ A. 흥분 전도·막전위 계산법</div>
+  <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:20px;">
+    <div style="text-align:center;flex-shrink:0;min-width:52px;">
+      <div style="font-size:34px;font-weight:900;color:var(--red);line-height:1;">6/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;margin-top:2px;">기출 출제</div>
+    </div>
+    <div style="width:2px;background:#e8a0a0;align-self:stretch;flex-shrink:0;border-radius:2px;"></div>
+    <div>
+      <div style="font-size:15px;font-weight:900;color:var(--red);margin-bottom:6px;">A. 흥분 전도·막전위 — 매회 반드시 출제, 절대 포기 불가</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">선택형 고배점(3.5~3.7점) + <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 서술 단골</span>.<br>계산 실수 없도록 아래 공식 완벽 암기 필수.</div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-red">핵심 공식</span> 막전위 상태별 분류 — 반드시 암기</div>
+    <div class="fmbox">
+<span class="key">휴지전위</span>   = <span class="val">−70 mV</span>  (자극 없을 때, 안정 상태)
+<span class="key">탈분극</span>     : <span class="val">−70 → +30 mV</span>  ← <span class="eq">Na⁺ 세포 안으로 유입 (이온 통로, ATP 불필요)</span>
+<span class="key">재분극</span>     : <span class="val">+30 → −70 mV</span>  ← <span class="eq">K⁺ 세포 밖으로 유출 (이온 통로, ATP 불필요)</span>
+<span class="key">과분극</span>     = <span class="val">−80 mV</span>  (K⁺ 과잉 유출 후, 잠시)
+<span class="key">Na⁺-K⁺ 펌프</span> → Na⁺ 3개 밖으로, K⁺ 2개 안으로 → <span class="eq">ATP 필요 (능동수송)</span>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-red">핵심 공식</span> 흥분 전도 속도 계산법</div>
+    <div class="fmbox">
+<span class="key">활동전위 그래프에서 각 단계까지 걸리는 시간:</span>
+  → <span class="val">+30 mV 도달</span>  = 자극 후 약 <span class="eq">1 ms</span>
+  → <span class="val">−80 mV (과분극)</span> = 자극 후 약 <span class="eq">2 ms</span>
+  → <span class="val">−70 mV 복귀</span>    = 자극 후 약 <span class="eq">3 ms</span>
+
+<span class="key">전도 속도</span> = 거리 ÷ (전체 경과시간 − 막전위 변화 시작까지 시간)
+
+예) 경과 4 ms, +30 mV → 이동 시간 = 4 − 1 = 3 ms
+    거리 6 cm → 속도 = 6 ÷ 3 = <span class="eq">2 cm/ms</span>
+    </div>
+    <div class="alert a-orange" style="margin:0 0 12px 0;">
+      <strong>⚠ 시냅스가 있는 경우</strong>
+      시냅스 지연 시간이 추가됨.
+    </div>
+    <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:10px;padding:16px 20px;margin:0;">
+      <div style="font-size:13px;font-weight:900;color:var(--red);letter-spacing:0.5px;margin-bottom:10px;">🚨 시험에서 가장 많이 틀리는 포인트 — 반드시 암기</div>
+      <div style="font-size:15px;font-weight:900;color:var(--text);line-height:2.1;">
+        시냅스는 <span style="background:#c0282c;color:#fff;padding:2px 8px;border-radius:4px;">축삭돌기 말단 → 가지돌기</span> 방향으로만 전달<br>
+        <span style="color:var(--red);font-weight:900;">역방향 전달은 절대 불가</span>
+      </div>
+      <div style="margin-top:12px;border-top:1.5px solid #e8a0a0;padding-top:10px;">
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:6px;">이유</div>
+        <div style="font-size:14px;line-height:1.9;color:var(--text);">
+          신경전달물질 수용체가 <strong>시냅스 후 뉴런(가지돌기 쪽)에만</strong> 존재.<br>
+          시냅스 이전 뉴런(축삭돌기) 쪽에는 수용체 없음 → 전달 불가.
+        </div>
+      </div>
+      <div style="margin-top:10px;border-top:1.5px solid #e8a0a0;padding-top:10px;">
+        <div style="font-size:13px;font-weight:700;color:var(--red);margin-bottom:6px;">시험에 적용하는 법</div>
+        <div style="font-size:14px;line-height:1.9;color:var(--text);">
+          막전위 표에서 어떤 지점이 <strong>흥분 전달을 못 받았으면(−70mV 유지)</strong><br>
+          → 그 지점과 자극 지점 사이에 <strong>시냅스가 있고 자극이 역방향</strong>으로 진행된 것.<br>
+          → 또는 시냅스 이후 뉴런에 자극을 줬을 때, 이전 뉴런 방향으로는 막전위 변화 없음.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B. 근육 수축 -->
+  <div class="sh2">▸ B. 근육 원섬유 마디 X 계산법</div>
+  <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:20px;">
+    <div style="text-align:center;flex-shrink:0;min-width:52px;">
+      <div style="font-size:34px;font-weight:900;color:var(--red);line-height:1;">6/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;margin-top:2px;">기출 출제</div>
+    </div>
+    <div style="width:2px;background:#e8a0a0;align-self:stretch;flex-shrink:0;border-radius:2px;"></div>
+    <div>
+      <div style="font-size:15px;font-weight:900;color:var(--red);margin-bottom:6px;">B. 근육 수축 — 매회 반드시 출제, <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 서술 단골</span></div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">A대 1.6μm 불변 공식이 핵심.<br>ⓐ~ⓒ 대응관계 먼저 확정 후 계산하는 순서 반드시 지킬 것.</div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">핵심 공식</span> 각 구간 명칭과 관계식</div>
+    <div class="fmbox">
+<span class="key">㉠</span> = 액틴 필라멘트만 있는 부분 (I대 절반, Z선~겹침 경계)
+<span class="key">㉡</span> = 액틴+마이오신 겹치는 부분
+<span class="key">㉢</span> = 마이오신만 있는 부분 (H대 절반)
+
+<span class="eq">X의 길이</span>  = 2×㉠ + 2×㉡ + 2×㉢   (좌우 대칭)
+<span class="eq">A대 길이</span>  = 2×㉡ + 2×㉢ = <span class="val">항상 1.6 μm (수축해도 불변)</span>
+<span class="eq">H대 길이</span>  = 2×㉢
+<span class="eq">I대 길이</span>  = 2×㉠
+
+∴ 수축 시: ㉠↓  ㉢↓  ㉡↑  A대 불변
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">풀이 순서</span> 계산 문제 접근 5단계</div>
+    <div class="blist" style="margin:0">
+      <div class="bitem"><div class="bitem-num">1</div><div>A대 = 1.6 μm 고정 → <strong>2×㉡ + 2×㉢ = 1.6</strong> 세팅</div></div>
+      <div class="bitem"><div class="bitem-num">2</div><div>주어진 X의 길이로 ㉠ 계산: <strong>㉠ = (X − 1.6) ÷ 2</strong></div></div>
+      <div class="bitem"><div class="bitem-num">3</div><div>주어진 조건(비율, 합, 차)으로 ㉡, ㉢ 확정</div></div>
+      <div class="bitem"><div class="bitem-num">4</div><div>ⓐ~ⓒ가 ㉠~㉢ 중 무엇인지 대입 후 확인</div></div>
+      <div class="bitem"><div class="bitem-num">5</div><div>다른 시점: A대는 그대로 두고 ㉠·㉢만 변화시켜 재계산</div></div>
+    </div>
+  </div>
+
+  <!-- C. 자율신경 -->
+  <div class="sh2">▸ C. 자율신경 완전 정리</div>
+  <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:20px;">
+    <div style="text-align:center;flex-shrink:0;min-width:52px;">
+      <div style="font-size:34px;font-weight:900;color:var(--red);line-height:1;">6/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;margin-top:2px;">기출 출제</div>
+    </div>
+    <div style="width:2px;background:#e8a0a0;align-self:stretch;flex-shrink:0;border-radius:2px;"></div>
+    <div>
+      <div style="font-size:15px;font-weight:900;color:var(--red);margin-bottom:6px;">C. 자율신경·중추신경 — 매회 출제, <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 신경전달물질 단골</span></div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">교감 이후 말단 = 노르에피네프린 / 부교감 이전·이후 전부 = 아세틸콜린.<br>뇌줄기 구성도 매회 오답 선지 출제됨.</div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-blue">암기표</span> 교감신경 vs 부교감신경</div>
+    <table>
+      <tr><th>구분</th><th>교감신경</th><th>부교감신경</th></tr>
+      <tr><td><strong>신경절 이전 말단</strong></td><td>아세틸콜린</td><td>아세틸콜린</td></tr>
+      <tr><td><strong>신경절 이후 말단</strong></td><td><span class="hl-red">노르에피네프린</span></td><td><span class="hl-green">아세틸콜린</span></td></tr>
+      <tr><td><strong>기원</strong></td><td>척수 (흉수·요수)</td><td>뇌줄기 또는 척수 천수</td></tr>
+      <tr><td><strong>심장</strong></td><td>심박수 ↑ 증가</td><td>심박수 ↓ 감소</td></tr>
+      <tr><td><strong>동공</strong></td><td>확대</td><td>축소</td></tr>
+      <tr><td><strong>이자</strong></td><td>α세포 → 글루카곤 분비 촉진 → 혈당 ↑</td><td>β세포 → 인슐린 분비 촉진 → 혈당 ↓</td></tr>
+      <tr><td><strong>방광</strong></td><td>이완 (소변 참음)</td><td>수축 (배뇨)</td></tr>
+    </table>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-blue">암기표</span> 중추신경계 구조별 기능</div>
+    <table>
+      <tr><th>구조</th><th>뇌줄기 여부</th><th>주요 기능</th></tr>
+      <tr><td><strong>대뇌</strong></td><td>×</td><td>고등 정신 기능, 감각·운동 겉질, 언어 중추</td></tr>
+      <tr><td><strong>간뇌 (시상하부)</strong></td><td>×</td><td><span class="hl-orange">체온·삼투압·혈당 조절 중추</span>, ADH 분비 조절</td></tr>
+      <tr><td><strong>중간뇌 (중뇌)</strong></td><td>○</td><td><span class="hl-blue">동공 반사</span> 중추, 자세 조절</td></tr>
+      <tr><td><strong>소뇌</strong></td><td>×</td><td>평형(균형) 유지, 근육 운동 조절</td></tr>
+      <tr><td><strong>연수</strong></td><td>○</td><td>호흡·심장박동·소화 반사 중추</td></tr>
+      <tr><td><strong>척수</strong></td><td>×</td><td>무릎반사·배뇨반사 중추, 전근(운동)·후근(감각)</td></tr>
+    </table>
+    <div style="background:#fff0f0;border:2px solid var(--red);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:13.5px;line-height:1.8;color:var(--text);">
+      🚨 <strong style="color:var(--red);">헷갈리게 나오니 꼭 정확히 암기</strong><br>
+      뇌줄기 = <strong>중간뇌 + 연수</strong> (+ 다리뇌 포함, 교과서마다 표현 다름)<br>
+      <strong style="color:var(--red);">소뇌·대뇌·간뇌는 뇌줄기 아님</strong> → 매회 오답 선지로 출제됨<br>
+      <span style="color:var(--muted);font-size:12px;">★ 기출에서 실제로 묻는 건 "○○는 뇌줄기에 속한다/속하지 않는다" 수준</span>
+    </div>
+  </div>
+
+  <!-- D. 항상성 -->
+  <div class="sh2">▸ D. 항상성 유지 완전 정리</div>
+  <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:20px;">
+    <div style="text-align:center;flex-shrink:0;min-width:52px;">
+      <div style="font-size:34px;font-weight:900;color:var(--red);line-height:1;">6/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;margin-top:2px;">기출 출제</div>
+    </div>
+    <div style="width:2px;background:#e8a0a0;align-self:stretch;flex-shrink:0;border-radius:2px;"></div>
+    <div>
+      <div style="font-size:15px;font-weight:900;color:var(--red);margin-bottom:6px;">D. 항상성 — 매회 3~4문항, <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 빈칸 단골</span></div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">혈당·ADH·티록신·체온 조절 경로 방향이 시험마다 뒤섞여 출제됨.<br>방향 헷갈리지 않도록 정확히 암기 필수.</div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-green">암기</span> 혈당 조절 경로 전체</div>
+    <div class="fmbox">
+<span class="key">혈당 상승 시</span> (식사 후):
+  이자 <span class="val">β세포</span> → <span class="eq">인슐린</span> 분비
+  → 간: 포도당 → 글리코젠 합성 (동화)
+  → 세포의 포도당 흡수 촉진 → 혈당 정상화
+
+<span class="key">혈당 감소 시</span> (운동·공복):
+  이자 <span class="val">α세포</span> → <span class="eq">글루카곤</span> 분비
+  부신 <span class="val">속질</span> → <span class="eq">에피네프린</span> 분비 (교감신경 자극 시)
+  → 간: 글리코젠 → 포도당 분해 (이화) → 혈당 정상화
+    </div>
+    <div style="background:#fff0f0;border:2px solid var(--red);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:13.5px;line-height:1.8;color:var(--text);">
+      🚨 <strong style="color:var(--red);">헷갈리게 나오니 꼭 정확히 암기</strong><br>
+      에피네프린 = 부신 <strong style="color:var(--red);">속질</strong> &nbsp;/&nbsp; 당질코르티코이드 = 부신 <strong style="color:var(--red);">겉질</strong><br>
+      <span style="color:var(--muted);font-size:12px;">매회 혼동 출제 — 속질/겉질 절대 반대로 쓰지 말 것</span>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-green">암기</span> ADH 분비 조절 경로</div>
+    <div class="fmbox">
+<span class="key">혈장삼투압 ↑</span>  또는  <span class="key">전체 혈액량 ↓</span>
+  → 시상하부 감지 → 뇌하수체 <span class="val">후엽</span> → <span class="eq">ADH 분비 ↑</span>
+  → 콩팥 세뇨관·집합관 수분 재흡수 ↑
+  → 오줌량 ↓, 오줌삼투압 ↑, 혈장삼투압 ↓ (정상화)
+
+<span class="key">물 많이 마실 때:</span>
+  혈장삼투압 ↓ → ADH ↓ → 오줌량 ↑, 오줌삼투압 ↓
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-green">암기</span> 티록신 분비 조절 (음성 피드백)</div>
+    <div class="fmbox">
+<span class="key">정상 경로:</span>
+  시상하부 → <span class="val">TRH</span> → 뇌하수체 전엽 → <span class="val">TSH</span> → 갑상샘 → <span class="eq">티록신</span>
+
+<span class="key">음성 피드백:</span>
+  티록신 ↑ → TRH·TSH 분비 억제 (시상하부·뇌하수체 전엽 모두)
+
+<span class="key">갑상샘 기능 저하증:</span>  티록신 ↓  →  TSH ↑, TRH ↑
+<span class="key">갑상샘 기능 항진증:</span>  티록신 ↑  →  TSH ↓, TRH ↓
+<span class="key">뇌하수체 이상 (TSH↓):</span> 티록신 ↓  →  TRH ↑ (피드백 정상이므로)
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-green">암기</span> 체온 조절</div>
+    <div class="fmbox">
+<span class="key">저온 자극:</span>
+  피부 혈관 수축 (교감신경), 털세움근 수축, 골격근 떨림
+  티록신 ↑, 에피네프린 ↑ → 열 발산 ↓, 열 생산 ↑
+
+<span class="key">고온 자극:</span>
+  피부 혈관 확장, 땀 분비 증가 → 열 발산 ↑, 열 생산 상대적 감소
+    </div>
+  </div>
+
+  <!-- E. 탐구방법 -->
+  <div class="sh2">▸ E. 탐구 방법·생물의 특성</div>
+
+  <div style="background:linear-gradient(135deg,#fff0f0,#fff8f0);border:2.5px solid var(--red);border-radius:12px;padding:16px 20px;margin-bottom:14px;display:flex;align-items:center;gap:16px;">
+    <div style="text-align:center;flex-shrink:0;">
+      <div style="font-size:32px;font-weight:900;color:var(--red);line-height:1;">5/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;">기출 출제</div>
+    </div>
+    <div style="width:1.5px;background:#e8a0a0;align-self:stretch;flex-shrink:0;"></div>
+    <div>
+      <div style="font-size:14px;font-weight:900;color:var(--red);margin-bottom:5px;">기출 필수 단원 — 절대 무시 금지</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.75;">
+        선택형 매회 출제 + <strong>2024-1학기 서답형으로도 직접 출제</strong>됨.<br>
+        조작변인·통제변인은 서답형에서 <strong>단어로 직접 써야</strong> 하는 경우 있음.
+      </div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-purple">암기</span> 탐구 방법 비교</div>
+    <table>
+      <tr><th>구분</th><th>귀납적 탐구</th><th>연역적 탐구</th></tr>
+      <tr><td><strong>순서</strong></td><td>관찰 → 공통점 발견 → 일반화</td><td>문제 인식 → 가설 → 실험 → 결론</td></tr>
+      <tr><td><strong>특징</strong></td><td style="color:var(--red);font-weight:700;">가설 없음</td><td style="color:var(--blue);font-weight:700;">가설 있음 + 대조 실험 필수</td></tr>
+      <tr><td><strong>예시</strong></td><td>다윈의 자연선택, 구달 침팬지</td><td>플레밍 페니실린, 얼룩말 실험</td></tr>
+    </table>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+    <div style="background:#fff0f0;border:2px solid var(--red);border-radius:10px;padding:15px 17px;">
+      <div style="font-size:11px;font-weight:900;color:var(--red);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">연역적 탐구 핵심</div>
+      <div style="font-size:16px;font-weight:900;color:var(--text);line-height:1.9;">
+        가설 <span style="color:var(--red);">있음</span> + 대조 실험
+      </div>
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid #e8a0a0;font-size:13px;color:var(--text);line-height:1.7;">
+        실험군(처리 O) vs 대조군(처리 X)<br>
+        → 한 가지 변인만 다르게 설정
+      </div>
+    </div>
+    <div style="background:#f5f0ff;border:2px solid var(--purple);border-radius:10px;padding:15px 17px;">
+      <div style="font-size:11px;font-weight:900;color:var(--purple);letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">귀납적 탐구 핵심</div>
+      <div style="font-size:16px;font-weight:900;color:var(--text);line-height:1.9;">
+        가설 <span style="color:var(--purple);">없음</span> + 관찰만
+      </div>
+      <div style="margin-top:8px;padding-top:8px;border-top:1px solid #c8a8f0;font-size:13px;color:var(--text);line-height:1.7;">
+        여러 사례 관찰 → 공통점 발견<br>
+        → 일반 원리 도출
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#eef5ff;border:2px solid var(--blue);border-radius:10px;padding:15px 18px;margin-bottom:14px;">
+    <div style="font-size:13px;font-weight:900;color:var(--blue);margin-bottom:12px;">📝 서답형 직접 출제 — 변인 3가지 즉시 쓸 수 있어야 함</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;">
+      <div style="background:#fff;border:1.5px solid #a0b8e8;border-radius:8px;padding:11px 13px;">
+        <div style="font-size:13px;font-weight:900;color:var(--blue);margin-bottom:5px;">조작변인</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.7;"><strong>의도적으로 다르게</strong> 설정<br><span style="color:var(--muted);font-size:12px;">예) 처리 여부, 농도</span></div>
+      </div>
+      <div style="background:#fff;border:1.5px solid #a0b8e8;border-radius:8px;padding:11px 13px;">
+        <div style="font-size:13px;font-weight:900;color:var(--blue);margin-bottom:5px;">통제변인</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.7;"><strong>동일하게 유지</strong>하는 것<br><span style="color:var(--muted);font-size:12px;">예) 온도, pH, 시간</span></div>
+      </div>
+      <div style="background:#fff;border:1.5px solid #a0b8e8;border-radius:8px;padding:11px 13px;">
+        <div style="font-size:13px;font-weight:900;color:var(--blue);margin-bottom:5px;">종속변인</div>
+        <div style="font-size:13px;color:var(--text);line-height:1.7;"><strong>결과로 측정</strong>하는 것<br><span style="color:var(--muted);font-size:12px;">예) 발아율, 분해량</span></div>
+      </div>
+    </div>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid #a0b8e8;font-size:13px;color:var(--text);">
+      ⚠ <strong>온도 고정한 실험</strong>에서 "온도는 조작변인이다" → <span style="color:var(--red);font-weight:900;">오답</span> (고정 = 통제변인)
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-purple">암기</span> 바이러스 vs 세균(대장균) vs 원생생물(아메바)</div>
+    <table>
+      <tr><th>특징</th><th>바이러스</th><th>대장균(세균)</th><th>아메바</th></tr>
+      <tr><td><strong>세포 구조</strong></td><td>× (비세포)</td><td>○ 원핵</td><td>○ 진핵</td></tr>
+      <tr><td><strong>핵막</strong></td><td>×</td><td>×</td><td>○</td></tr>
+      <tr><td><strong>물질대사</strong></td><td>× (숙주 의존)</td><td>○</td><td>○</td></tr>
+      <tr><td><strong>핵산</strong></td><td>○</td><td>○</td><td>○</td></tr>
+      <tr><td><strong>증식</strong></td><td>숙주 내 핵산 복제</td><td>세포 분열</td><td>세포 분열</td></tr>
+    </table>
+  </div>
+
+  <!-- F. 물질대사 -->
+  <div class="sh2">▸ F. 물질대사·ATP·기관계</div>
+  <div style="background:#fff0f0;border:2.5px solid var(--red);border-radius:12px;padding:18px 22px;margin-bottom:14px;display:flex;align-items:center;gap:20px;">
+    <div style="text-align:center;flex-shrink:0;min-width:52px;">
+      <div style="font-size:34px;font-weight:900;color:var(--red);line-height:1;">5/6</div>
+      <div style="font-size:11px;font-weight:700;color:var(--red);letter-spacing:0.5px;margin-top:2px;">기출 출제</div>
+    </div>
+    <div style="width:2px;background:#e8a0a0;align-self:stretch;flex-shrink:0;border-radius:2px;"></div>
+    <div>
+      <div style="font-size:15px;font-weight:900;color:var(--red);margin-bottom:6px;">F. 물질대사·ATP·기관계 — 5회 출제, 선택형 단골</div>
+      <div style="font-size:13px;color:var(--text);line-height:1.8;">노폐물 생성·배출 경로(암모니아→간→요소→콩팥)가 <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 단골</span><br>이화·동화 구분, 기관계 통합 작용도 선택형으로 자주 출제됨.</div>
+    </div>
+  </div>
+
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-orange">암기</span> 노폐물 생성 정리</div>
+    <table>
+      <tr><th>영양소</th><th>생성 노폐물</th><th>배출 기관</th></tr>
+      <tr><td><strong>탄수화물·지방</strong></td><td>물, 이산화탄소</td><td>폐(CO₂), 폐·콩팥(물)</td></tr>
+      <tr><td><strong>단백질</strong></td><td>물, 이산화탄소, <span class="hl-red">암모니아</span></td><td>+ 간(암모니아→요소) → 콩팥(요소 배설)</td></tr>
+    </table>
+    <div style="background:#fff0f0;border:2px solid var(--red);border-radius:8px;padding:12px 16px;margin-top:10px;font-size:13.5px;line-height:1.8;color:var(--text);">
+      🚨 <strong style="color:var(--red);">헷갈리게 나오니 꼭 정확히 암기</strong><br>
+      암모니아(독성 강함) → <strong>간</strong>에서 요소(독성 낮음)로 전환 → <strong>콩팥</strong>으로 배설<br>
+      <span style="color:var(--muted);font-size:12px;">이 경로 <span style="background:#c0282c;color:#fff;font-weight:900;padding:1px 7px;border-radius:4px;font-size:12px;">서답형 단골</span> — 기관 순서 절대 바꾸지 말 것</span>
+    </div>
+  </div>
+
+  <!-- G. 생태계 -->
+  <div class="sh2">▸ G. 생태계 (2022개정 신규 단원 — 처음 보는 경우 전부 읽을 것)</div>
+
+  <div class="alert a-teal" style="background:#e5f5f3;border-left:4px solid var(--teal);border-radius:8px;padding:14px 18px;margin-bottom:14px;font-size:14px;line-height:1.75;">
+    <strong style="display:block;font-size:11px;font-family:'Noto Sans KR',sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;color:var(--teal);">출제 방향</strong>
+    기출이 없는 신규 단원이므로 <strong>용어 정의·분류·예시 매칭</strong> 형태로 1~2문항 출제 예상. 복잡한 계산은 없고, 개념과 예시를 정확히 연결하는 문제가 나올 가능성이 높음.
+  </div>
+
+  <!-- 생태계 구성 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 1</span> 생태계의 구성</div>
+    <table>
+      <tr><th>구분</th><th>종류</th><th>예시</th><th>역할</th></tr>
+      <tr>
+        <td rowspan="3"><strong>생물적<br>요소</strong></td>
+        <td><strong>생산자</strong></td>
+        <td>식물, 조류(藻類)</td>
+        <td>광합성으로 유기물 생산 — 에너지 고정</td>
+      </tr>
+      <tr>
+        <td><strong>소비자</strong></td>
+        <td>초식동물(1차), 육식동물(2차·3차)</td>
+        <td>유기물 소비 — 에너지 이동</td>
+      </tr>
+      <tr>
+        <td><strong>분해자</strong></td>
+        <td>세균, 곰팡이(버섯 포함)</td>
+        <td>유기물 → 무기물로 분해, 물질 순환</td>
+      </tr>
+      <tr>
+        <td><strong>비생물적<br>요소</strong></td>
+        <td colspan="2">빛, 온도, 물, 공기(CO₂·O₂), 토양, 무기염류</td>
+        <td>생물의 생활 환경 조성</td>
+      </tr>
+    </table>
+    <div class="memo">
+      💡 <strong>분해자는 소비자가 아님</strong> — 생물을 먹지 않고 사체·배설물의 유기물을 분해. 먹이 그물에 포함되지 않음.<br>
+      💡 바이러스는 생물적 요소에 <strong>포함되지 않음</strong> — 세포 구조 없음, 스스로 물질대사 불가.
+    </div>
+  </div>
+
+  <!-- 생태계 구성 요소 간 관계 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 2</span> 생태계 구성 요소 간 관계 — 반드시 구분</div>
+    <table>
+      <tr><th>관계 이름</th><th>방향</th><th>예시</th></tr>
+      <tr>
+        <td><strong>작용</strong></td>
+        <td>비생물적 요소 → 생물</td>
+        <td>빛의 세기가 식물의 광합성량에 영향 / 온도가 개구리 활동에 영향 / 강수량이 식물 분포에 영향</td>
+      </tr>
+      <tr>
+        <td><strong>반작용</strong></td>
+        <td>생물 → 비생물적 요소</td>
+        <td>지렁이가 토양을 변화시킴 / 식물이 토양의 수분·무기염류 흡수 → 토양 성분 변화 / 생물의 호흡으로 CO₂ 농도 증가</td>
+      </tr>
+      <tr>
+        <td><strong>상호작용</strong></td>
+        <td>생물 ↔ 생물</td>
+        <td>포식과 피식, 경쟁, 공생 등 (아래 군집 참고)</td>
+      </tr>
+    </table>
+    <div class="memo">💡 시험에서 예시를 주고 "작용인지 반작용인지 상호작용인지" 고르는 문제 출제 가능. 방향이 핵심.</div>
+  </div>
+
+  <!-- 개체군 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 3</span> 개체군 — 같은 종 × 같은 지역</div>
+    <div class="fmbox">
+<span class="key">개체군</span> = 일정 지역에 사는 <span class="val">같은 종</span>의 개체들의 집단
+  예) 한 연못의 붕어 집단 / 한 숲의 소나무 집단
+
+<span class="key">개체군 밀도</span> = 단위 면적(또는 부피)당 개체 수
+  → 먹이, 서식 공간, 기후 등에 따라 변함
+
+<span class="key">생장 곡선 2가지:</span>
+  J자형 — 환경 저항 없을 때 (이론적, 지수 성장)
+            → 실제 자연에서는 나타나기 어려움
+  S자형 — 환경 저항 있을 때 (실제 자연)
+            → 개체 수가 늘수록 먹이·공간 부족
+            → 최대 개체 수(환경 수용 능력, K)에서 안정
+    </div>
+    <div class="memo">💡 S자형에서 개체군이 가장 빠르게 증가하는 시점은 <strong>K/2(최대 개체 수의 절반)</strong> 부근.</div>
+  </div>
+
+  <!-- 군집 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 4</span> 군집 — 여러 종 × 같은 지역</div>
+    <div class="fmbox">
+<span class="key">군집</span> = 일정 지역에 사는 <span class="val">여러 종</span>의 개체군들의 집합
+  예) 한 숲의 소나무·참나무·다람쥐·딱따구리 등 전체
+    </div>
+
+    <div style="margin-top:12px;font-weight:700;font-size:14px;color:var(--text);margin-bottom:8px;">군집 내 개체군 간 상호작용 — 이게 제일 중요</div>
+    <table>
+      <tr><th>관계</th><th>두 종 간 득·실</th><th>특징·예시</th></tr>
+      <tr>
+        <td><strong>경쟁</strong></td>
+        <td><span style="color:var(--red);font-weight:700;">둘 다 손해 (−/−)</span></td>
+        <td>같은 먹이·공간 두고 다툼. 경쟁 배타 원리: 경쟁에서 진 종은 사라짐.<br>예) 두 종의 짚신벌레가 같은 먹이 두고 경쟁</td>
+      </tr>
+      <tr>
+        <td><strong>포식과 피식</strong></td>
+        <td><span style="color:var(--green);font-weight:700;">포식자 이득(+)</span><br><span style="color:var(--red);font-weight:700;">피식자 손해(−)</span></td>
+        <td>한 종이 다른 종을 먹음. 포식자↑ → 피식자↓ → 포식자↓ → 피식자↑ (주기적 변동)<br>예) 스라소니(포식자) ↔ 눈신토끼(피식자)</td>
+      </tr>
+      <tr>
+        <td><strong>상리공생</strong></td>
+        <td><span style="color:var(--green);font-weight:700;">둘 다 이득 (+/+)</span></td>
+        <td>두 종 모두 이득.<br>예) 말미잘과 흰동가리 / 콩과식물과 뿌리혹박테리아(질소 고정)</td>
+      </tr>
+      <tr>
+        <td><strong>편리공생</strong></td>
+        <td><span style="color:var(--green);font-weight:700;">한 종만 이득(+)</span><br><span style="color:var(--muted);font-weight:700;">다른 종 무관(0)</span></td>
+        <td>한 종만 이득, 다른 종은 영향 없음.<br>예) 빨판상어가 상어에 붙어 이동 (상어는 이득도 손해도 없음)</td>
+      </tr>
+      <tr>
+        <td><strong>기생</strong></td>
+        <td><span style="color:var(--green);font-weight:700;">기생자 이득(+)</span><br><span style="color:var(--red);font-weight:700;">숙주 손해(−)</span></td>
+        <td>한 종(기생자)이 다른 종(숙주)에 붙어 영양 착취.<br>예) 회충(기생자) ↔ 사람(숙주) / 겨우살이 ↔ 나무</td>
+      </tr>
+    </table>
+    <div class="memo">
+      💡 <strong>포식과 피식 vs 기생 구분:</strong> 포식은 먹어 없애는 것, 기생은 숙주를 죽이지 않고 계속 착취하는 것.<br>
+      💡 <strong>경쟁 vs 포식 구분:</strong> 경쟁은 같은 자원을 두고 다투는 것(둘 다 −), 포식은 한 종이 다른 종을 먹는 것(+ / −).
+    </div>
+  </div>
+
+  <!-- 에너지 흐름과 물질 순환 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 5</span> 에너지 흐름과 물질 순환</div>
+    <div class="fmbox">
+<span class="key">에너지 흐름:</span>
+  태양 → 생산자(광합성) → 1차소비자 → 2차소비자 → 3차소비자
+  → 각 단계에서 <span class="val">열에너지</span>로 손실 → <span class="eq">단방향, 순환하지 않음</span>
+  → 상위 영양단계로 갈수록 에너지양 감소
+
+<span class="key">물질(탄소·질소 등) 순환:</span>
+  생산자 → 소비자 → 분해자 → 비생물적 환경 → 생산자
+  → <span class="eq">순환함 (에너지와 다름)</span>
+
+<span class="key">핵심 차이:</span>
+  에너지 = 단방향 흐름, 재사용 불가
+  물질   = 순환, 재사용 가능
+    </div>
+    <div class="memo">💡 "에너지는 순환한다"는 오답. "물질은 순환한다"는 정답. 이 차이가 선지에 자주 나옴.</div>
+  </div>
+
+  <!-- 먹이 사슬과 먹이 그물 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">개념 6</span> 먹이 사슬과 먹이 그물</div>
+    <div class="fmbox">
+<span class="key">먹이 사슬:</span> 생산자 → 1차 소비자 → 2차 소비자 → 3차 소비자
+  (선형, 단순)
+  예) 풀 → 메뚜기 → 개구리 → 뱀 → 매
+
+<span class="key">먹이 그물:</span> 여러 먹이 사슬이 복잡하게 연결된 것
+  → 생태계가 안정적으로 유지되는 이유
+  → 한 종이 사라져도 다른 경로로 에너지 흐름 가능
+
+<span class="key">영양단계:</span>
+  생산자 = 1영양단계
+  1차 소비자 = 2영양단계
+  2차 소비자 = 3영양단계
+    </div>
+    <div class="memo">💡 화살표 방향 = 에너지(유기물)가 이동하는 방향 = 먹히는 쪽 → 먹는 쪽. 즉 풀 → 메뚜기에서 화살표는 메뚜기가 풀을 먹는다는 의미.</div>
+  </div>
+
+  <!-- 자주 나오는 예시 정리 -->
+  <div class="cbox">
+    <div class="cbox-head"><span class="badge b-teal">예시 암기</span> 시험에 자주 등장하는 예시 — 관계 즉시 매칭</div>
+    <table>
+      <tr><th>예시</th><th>관계</th><th>이유</th></tr>
+      <tr><td>콩과식물 ↔ 뿌리혹박테리아</td><td><strong>상리공생</strong></td><td>콩: 질소 얻음(+) / 박테리아: 유기물 얻음(+)</td></tr>
+      <tr><td>말미잘 ↔ 흰동가리</td><td><strong>상리공생</strong></td><td>흰동가리: 보호받음(+) / 말미잘: 먹이 유인(+)</td></tr>
+      <tr><td>빨판상어 ↔ 상어</td><td><strong>편리공생</strong></td><td>빨판상어: 이동·먹이(+) / 상어: 무관(0)</td></tr>
+      <tr><td>회충 ↔ 사람</td><td><strong>기생</strong></td><td>회충: 영양 착취(+) / 사람: 손해(−)</td></tr>
+      <tr><td>겨우살이 ↔ 나무</td><td><strong>기생</strong></td><td>겨우살이: 물·양분 착취(+) / 나무: 손해(−)</td></tr>
+      <tr><td>스라소니 ↔ 눈신토끼</td><td><strong>포식과 피식</strong></td><td>스라소니: 먹음(+) / 눈신토끼: 먹힘(−)</td></tr>
+      <tr><td>두 종의 짚신벌레</td><td><strong>경쟁</strong></td><td>같은 먹이 자원 두고 다툼 (둘 다 −)</td></tr>
+      <tr><td>지의류(균류+조류)</td><td><strong>상리공생</strong></td><td>균류: 물·무기물 제공(+) / 조류: 광합성산물 제공(+)</td></tr>
+    </table>
+  </div>
+
+  <div style="background:#fff0f0;border:2px solid var(--red);border-radius:8px;padding:12px 16px;margin-top:4px;margin-bottom:14px;font-size:13.5px;line-height:1.8;color:var(--text);">
+    🚨 <strong style="color:var(--red);">헷갈리게 나오니 꼭 정확히 암기</strong><br>
+    기생 = 숙주에게 <strong style="color:var(--red);">손해(−)</strong> 있음 &nbsp;/&nbsp; 편리공생 = 한 종이 <strong>무관(0)</strong><br>
+    포식·피식 = 한 종이 <strong>먹어 없앰</strong> &nbsp;/&nbsp; 기생 = 숙주 죽이지 않고 <strong>계속 착취</strong>
+  </div>
+</div>
+
+<!-- ═══════════════════════════
+  ④ 서답형 분석·예측
+═══════════════════════════ -->
+<div id="essay" class="sec">
+
+  <div class="sh"><span class="dot" style="background:var(--orange)"></span>서답형 출제 분석 및 이번 시험 예측</div>
+
+  <div style="background:#fff0f0;border:3px solid var(--red);border-radius:12px;padding:20px 24px;margin-bottom:18px;">
+    <div style="font-size:14px;font-weight:900;color:var(--red);margin-bottom:14px;letter-spacing:0.3px;">🚨 서술형 감점 주의 — 이거 지키지 않으면 맞아도 틀림</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+      <div style="background:#fff;border:2px solid var(--red);border-radius:8px;padding:12px 15px;display:flex;align-items:flex-start;gap:10px;">
+        <div style="background:var(--red);color:#fff;font-weight:900;font-size:13px;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">①</div>
+        <div>
+          <div style="font-size:14px;font-weight:900;color:var(--text);">단위 반드시 기재</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">μm, mV, cm/ms, kcal 등 빠지면 감점</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:2px solid var(--red);border-radius:8px;padding:12px 15px;display:flex;align-items:flex-start;gap:10px;">
+        <div style="background:var(--red);color:#fff;font-weight:900;font-size:13px;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">②</div>
+        <div>
+          <div style="font-size:14px;font-weight:900;color:var(--text);">완성된 문장으로 작성</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">단어·기호만 쓰면 감점</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:2px solid var(--red);border-radius:8px;padding:12px 15px;display:flex;align-items:flex-start;gap:10px;">
+        <div style="background:var(--red);color:#fff;font-weight:900;font-size:13px;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">③</div>
+        <div>
+          <div style="font-size:14px;font-weight:900;color:var(--text);">조건 항목 전부 포함</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">하나라도 빠지면 오답 처리</div>
+        </div>
+      </div>
+      <div style="background:#fff;border:2px solid var(--red);border-radius:8px;padding:12px 15px;display:flex;align-items:flex-start;gap:10px;">
+        <div style="background:var(--red);color:#fff;font-weight:900;font-size:13px;border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">④</div>
+        <div>
+          <div style="font-size:14px;font-weight:900;color:var(--text);">답의 개수 정확히</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">많거나 적어도 오답 처리</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert a-orange">
+    <strong>서답형 구성 패턴 (6회 동일)</strong>
+    매회 6문항 = 단답형 3~4문항(각 1~3점) + 서술형 2~3문항(4~9점, 조건 포함 서술). 총 배점 약 30점. 단답형은 용어·수치 빈칸, 서술형은 계산 과정+결론 조건 포함 서술.
+  </div>
+
+  <div class="sh2">▸ 과거 서답형 출제 주제 전수 정리</div>
+  <table>
+    <tr><th>시험</th><th>서답형 주제</th><th>형태</th></tr>
+    <tr><td>2023-1학기</td><td>근육수축 계산 (ⓐ~ⓒ 대응, t₁·t₂ 값)</td><td>조건 서술</td></tr>
+    <tr><td>2023-1학기</td><td>티록신 TRH TSH 명칭 + TSH·티록신 농도로 A·B·C 판별</td><td>단답+서술</td></tr>
+    <tr><td>2023-1학기</td><td>혈당 조절 교감·부교감 호르몬 명칭·분비샘</td><td>조건 서술</td></tr>
+    <tr><td>2023-1학기</td><td>흥분 전도 속도 계산 + Ⅰ·Ⅲ·Ⅴ 지점 매칭</td><td>조건 서술</td></tr>
+    <tr><td>2023-2학기</td><td>흥분 전도 속도 계산 (P=X or Y, d₃ 막전위)</td><td>단답형</td></tr>
+    <tr><td>2023-2학기</td><td>TSH·티록신 기능 이상 A~D 분류 + TRH 농도 판단</td><td>단답형</td></tr>
+    <tr><td>2023-2학기</td><td>근육수축 ⓑ·ⓒ 대응 + t₁·t₂ 각 구간 길이</td><td>단답+서술</td></tr>
+    <tr><td>2023-2학기</td><td>흥분 전도 속도 비교 (A~C 중 최고속) + 지점 매칭</td><td>조건 서술</td></tr>
+    <tr><td>2023-2학기</td><td>ADH 수용체 이상 A·B 구분 + 오줌 삼투압 비교</td><td>조건 서술</td></tr>
+    <tr><td>2024-1학기</td><td>탐구 실험군 찾기 + 조작변인·통제변인</td><td>단답형</td></tr>
+    <tr><td>2024-1학기</td><td>혈당 조절 β세포·인슐린·글리코젠·촉진 빈칸</td><td>단답형</td></tr>
+    <tr><td>2024-1학기</td><td>자율신경 말단 신경전달물질 (아세틸콜린·노르에피네프린)</td><td>단답형</td></tr>
+    <tr><td>2024-1학기</td><td>근육수축 ⓐ의 길이 계산 + X의 길이 조건 서술</td><td>서술형</td></tr>
+    <tr><td>2024-1학기</td><td>흥분 전도 속도 + 특정 시점 막전위 계산</td><td>서술형</td></tr>
+    <tr><td>2024-2학기</td><td>바이러스·죽순·아메바·석순 특성 분류 단답</td><td>단답형</td></tr>
+    <tr><td>2024-2학기</td><td>중추신경계 구조 A~D (간뇌·소뇌·척수·중간뇌)</td><td>단답형</td></tr>
+    <tr><td>2024-2학기</td><td>ADH 분비 빈칸 (증가/감소 ×4)</td><td>단답형</td></tr>
+    <tr><td>2024-2학기</td><td>혈당 조절 빈칸 (α세포·글루카곤·교감·속질·에피네프린)</td><td>단답형</td></tr>
+    <tr><td>2024-2학기</td><td>ABO식 혈액형 Ⅰ·Ⅱ·Ⅲ 판별</td><td>단답형</td></tr>
+    <tr><td>2024-2학기</td><td>근육수축 H대 길이 + X의 길이 조건 서술</td><td>서술형</td></tr>
+    <tr><td>2024-2학기</td><td>흥분 전도 속도 (A·B·C) + 막전위 조건 서술</td><td>서술형</td></tr>
+    <tr><td>2025-1학기</td><td>근육수축 ⓐ·ⓑ 대응 + w·x·y·z 값</td><td>서답형</td></tr>
+    <tr><td>2025-1학기</td><td>흥분 전도·전달 (지점·시냅스 위치·속도·막전위)</td><td>서답형</td></tr>
+    <tr><td>2025-1학기</td><td>신경 경로 (말이집 뉴런·신경전달물질·방광 변화)</td><td>서답형</td></tr>
+    <tr><td>2025-1학기</td><td>에너지 계산 (1일 소비량·체중 변화 예상)</td><td>서답형</td></tr>
+    <tr><td>2025-2학기</td><td>근육수축 L값 + ⓐ·ⓑ·ⓒ 값</td><td>서답형</td></tr>
+    <tr><td>2025-2학기</td><td>혈당 조절 (자율신경 X 종류 + ㉠~㉢ 호르몬명)</td><td>서답형</td></tr>
+    <tr><td>2025-2학기</td><td>혈당 조절 경로 서술 (중추·내분비샘·호르몬 방향)</td><td>서술형</td></tr>
+    <tr><td>2025-2학기</td><td>신경 경로 (말이집 뉴런·신경전달물질·신경세포체 위치·기관 변화)</td><td>서술형</td></tr>
+    <tr><td>2025-2학기</td><td>흥분 전도 (㉠값·지점·막전위·분극상태)</td><td>서술형</td></tr>
+  </table>
+
+  <div class="sh2">▸ 이번 시험 서답형 예측 (현재 시험범위 기준)</div>
+
+  <div class="alert a-red">
+    <strong>⚠ 예측 근거</strong>
+    6회 기출 100% 분석. 매회 반드시 출제된 주제 3개: ①근육수축 계산, ②흥분 전도 속도 계산, ③항상성(혈당·ADH·티록신) 빈칸.
+  </div>
+
+  <div class="blist">
+    <div class="bitem">
+      <div class="bitem-num">예측①</div>
+      <div><strong>근육 원섬유 마디 X 계산 (서술형 단골, 6/6회)</strong><br>
+      두 시점 X 길이, A대 고정, ㉠·㉡·㉢ 길이 조건 → ⓐ·ⓑ·ⓒ 대응관계 + 특정 시점 구간 길이 계산 서술. <span class="hl-red">A대 = 1.6μm 불변</span>, <span class="hl-red">X = 2㉠+2㉡+2㉢</span> 반드시 암기.</div>
+    </div>
+    <div class="bitem">
+      <div class="bitem-num">예측②</div>
+      <div><strong>흥분 전도 속도 계산 + 특정 시점 막전위 (서술형 단골, 6/6회)</strong><br>
+      민말이집 신경 A·B(·C) 지점 그림 + 경과 시간별 막전위 표 → 전도 속도 계산 과정 서술 + 특정 ms일 때 지점 막전위 값 + 탈분극/재분극/과분극 상태 판단. 조건: 속도 계산 과정, 지점 명시, 단위 필수.</div>
+    </div>
+    <div class="bitem">
+      <div class="bitem-num">예측③</div>
+      <div><strong>혈당 조절 경로 빈칸 또는 서술 (5/6회)</strong><br>
+      α세포/β세포, 글루카곤/인슐린, 교감/부교감신경, 부신 속질/겉질, 에피네프린 빈칸. 또는 혈당 조절 전체 경로 조건 서술.</div>
+    </div>
+    <div class="bitem">
+      <div class="bitem-num">예측④</div>
+      <div><strong>신경 경로 서술 (2024-2학기~2025 매회 출제)</strong><br>
+      중추신경계 → 말초신경 → 기관 그림에서: 말이집 뉴런 여부, 각 뉴런 말단 신경전달물질, 특정 뉴런 흥분 시 기관 변화 서술. <span class="hl-red">2025년 들어 비중 상승 중.</span></div>
+    </div>
+    <div class="bitem">
+      <div class="bitem-num">예측⑤</div>
+      <div><strong>ADH 조절 빈칸 또는 티록신 피드백 (5/6회)</strong><br>
+      혈장삼투압/혈액량 변화에 따른 ADH·오줌 삼투압·오줌량 방향 빈칸. 또는 TSH·TRH·티록신 농도로 환자 유형 판별.</div>
+    </div>
+    <div class="bitem">
+      <div class="bitem-num">예측⑥</div>
+      <div><strong>탐구 설계 변인 (1학기 출제 빈도 높음)</strong><br>
+      실험군/대조군 구분, 조작변인·통제변인 서술. 2024-1학기 서답형 1번으로 출제. 1학기 기준이면 이번에도 가능성 있음.</div>
+    </div>
+  </div>
+
+
+</div>
+
+<!-- ═══════════════════════════
+  ⑤ 최종 점검 리스트
+═══════════════════════════ -->
+<div id="check" class="sec">
+
+  <div class="sh"><span class="dot" style="background:var(--purple)"></span>시험 전 최종 점검 리스트</div>
+
+  <div class="alert a-purple">
+    <strong>사용 방법</strong>
+    각 항목을 스스로 설명할 수 있는지 확인. 막히면 해당 개념 즉시 복습.
+  </div>
+
+  <div class="sh2">▸ 흥분 전도 체크</div>
+  <div class="blist">
+    <div class="bitem"><div class="bitem-num">□</div><div>막전위 +30 / -70 / -80이 각각 어떤 상태인지 즉시 말할 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>탈분극 시 Na⁺ 이온 통로 → ATP 불필요, Na⁺-K⁺ 펌프 → ATP 필요를 구분한다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>전도 속도 공식: 거리 ÷ (경과시간 − 막전위 변화 시작까지 시간) 적용 가능하다</div></div>
+    <div class="bitem" style="background:#fff0f0;border:2px solid var(--red);">
+      <div class="bitem-num" style="color:var(--red);font-size:15px;">🚨</div>
+      <div><span style="color:var(--red);font-weight:900;">시냅스 역방향 전달 절대 불가</span> — 수용체가 시냅스 후 뉴런(가지돌기)에만 존재하기 때문. 막전위가 −70mV 그대로면 흥분이 못 왔다는 뜻 → 시냅스 역방향 상황.</div>
+    </div>
+    <div class="bitem"><div class="bitem-num">□</div><div>말이집(슈반세포) = 절연체, 랑비에 결절에서만 활동전위 발생 → 도약전도</div></div>
+  </div>
+
+  <div class="sh2">▸ 근육 수축 체크</div>
+  <div class="blist">
+    <div class="bitem"><div class="bitem-num">□</div><div>A대 길이는 수축·이완에 관계없이 <strong>1.6μm로 불변</strong>임을 안다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>X = 2㉠ + 2㉡ + 2㉢ 공식 (좌우 대칭) 바로 쓸 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>수축 시 ㉠(I대 절반)·㉢(H대 절반) 감소, ㉡ 증가, A대 불변임을 안다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>ⓐ~ⓒ가 ㉠~㉢ 순서 없이 제시 시 → 먼저 대응관계 확정 후 계산한다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>H대 = 2×㉢, I대 = 2×㉠ 공식을 안다</div></div>
+  </div>
+
+  <div class="sh2">▸ 자율신경·중추신경 체크</div>
+  <div class="blist">
+    <div class="bitem"><div class="bitem-num">□</div><div>교감신경 신경절 이후: <strong>노르에피네프린</strong> / 부교감신경 말단: <strong>아세틸콜린</strong> 즉시 말할 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>뇌줄기 = 중간뇌+연수+다리뇌 (소뇌·대뇌·간뇌는 뇌줄기 아님)</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>동공 반사 중추 = 중간뇌 / 심장박동·호흡 = 연수 / 체온·삼투압 = 시상하부(간뇌)</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>전근 = 운동(원심성) / 후근 = 감각(구심성)</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>교감: 심박↑·동공확대·혈당↑ / 부교감: 심박↓·동공축소·혈당↓</div></div>
+  </div>
+
+  <div class="sh2">▸ 항상성 체크</div>
+  <div class="blist">
+    <div class="bitem"><div class="bitem-num">□</div><div>β세포 → 인슐린(혈당↑ 시) / α세포 → 글루카곤(혈당↓ 시) 즉시 말할 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>ADH↑ → 오줌량↓, 오줌삼투압↑ 방향을 헷갈리지 않는다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>티록신 음성 피드백: 티록신↑ → TRH·TSH 분비 억제를 설명할 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>1형 당뇨(β세포 파괴) vs 2형 당뇨(수용체 이상) 차이를 설명할 수 있다</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>에피네프린 = 부신 속질 / 당질코르티코이드 = 부신 겉질</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>저온 자극 시: 피부혈관 수축(교감), 골격근 떨림, 티록신·에피네프린 분비 증가</div></div>
+  </div>
+
+  <div class="sh2">▸ 서답형 감점 방지 체크</div>
+  <div class="blist">
+    <div class="bitem"><div class="bitem-num">□</div><div>모든 수치에 단위(μm, mV, cm/ms, kcal 등) 반드시 기재</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>서술형은 완성된 문장 형태로 작성 (단어·기호만 쓰면 감점)</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>조건에 명시된 항목 전부 포함 여부 제출 전 확인</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>답의 개수가 조건과 일치하는지 확인 (많거나 적으면 오답)</div></div>
+    <div class="bitem"><div class="bitem-num">□</div><div>막전위 값 부호(-) 포함 여부 확인 (부호 빠지면 감점)</div></div>
+  </div>
+
+  <hr class="div">
+
+  <div class="alert a-blue">
+    <strong>마지막 정리 — 출제 비중 순위</strong>
+    <span class="hl-red">흥분 전도·근육 수축</span> (계산 고배점) &gt; <span class="hl-orange">항상성(혈당·ADH·티록신·체온)</span> (선택형+서술형) &gt; <span class="hl-blue">신경계 구조·자율신경</span> (선택형) &gt; <span class="hl-green">물질대사·탐구방법</span> (선택형) &gt; <span class="hl-teal">생태계</span> (신규, 기본 1~2문항 예상).<br><br>
+    시간 배분: 계산 문항(흥분 전도·근육수축)에 충분한 시간 확보할 것.
+  </div>
+</div>
+
+</main>
+
+<script>
+function go(id, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+}
+</script>
+</body>
+</html>
