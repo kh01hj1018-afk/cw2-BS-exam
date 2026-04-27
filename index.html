@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>청원고 '생명과학' 중간고사 대비</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-soft: #f8fafc;
+      --border: #e5eaf2;
+      --text: #111827;
+      --muted: #6b7280;
+      --primary: #1f3a8a;
+      --primary-soft: #eef3ff;
+      --concept-soft: #f8f9fc;
+      --quiz-soft: #f7faf8;
+      --exam-soft: #f8f8fb;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top left, #eef3ff 0%, transparent 28%),
+        radial-gradient(circle at top right, #f3f6fb 0%, transparent 24%),
+        var(--bg);
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 24px 60px;
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(229, 234, 242, 0.9);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
+      padding: 40px 42px 34px;
+      margin-bottom: 20px;
+    }
+
+    .hero-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 46px;
+      line-height: 1.15;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .hero h1 .accent {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      margin-top: 10px;
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: #334155;
+    }
+
+    .hero-desc {
+      margin-top: 16px;
+      max-width: 760px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .hero-tags {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      color: #334155;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(229, 234, 242, 0.95);
+      box-shadow: var(--shadow);
+      border-radius: 26px;
+      padding: 28px;
+      margin-top: 18px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+
+    .section-header-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
+    }
+
+    .section-number {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f1f5f9;
+      border: 1px solid var(--border);
+      color: #334155;
+      font-size: 17px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.25;
+      font-weight: 800;
+      color: #111827;
+    }
+
+    .section-sub {
+      margin-top: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .section-badge {
+      flex-shrink: 0;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 700;
+      color: #475569;
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-width: 0;
+      text-decoration: none;
+      color: inherit;
+      padding: 18px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 26px rgba(15, 23, 42, 0.07);
+      border-color: #d7deea;
+    }
+
+    .card-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .icon-box {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .card-text {
+      min-width: 0;
+    }
+
+    .card-title {
+      font-size: 18px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: #111827;
+      word-break: keep-all;
+    }
+
+    .card-desc {
+      margin-top: 4px;
+      font-size: 13px;
+      line-height: 1.6;
+      color: var(--muted);
+      font-weight: 500;
+      word-break: keep-all;
+    }
+
+    .arrow {
+      flex-shrink: 0;
+      color: #94a3b8;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .card-pdf {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    }
+
+    .card-concept {
+      background: linear-gradient(180deg, #ffffff 0%, #fcfcfe 100%);
+    }
+
+    .card-quiz {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfb 100%);
+    }
+
+    .card-exam {
+      background: linear-gradient(180deg, #ffffff 0%, #fcfcff 100%);
+    }
+
+    .featured {
+      padding: 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
+      border: 1px solid var(--border);
+      margin-bottom: 16px;
+    }
+
+    .featured-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .featured-text {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #475569;
+    }
+
+    .study-tip {
+      margin-top: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: 24px;
+      padding: 24px 26px;
+    }
+
+    .study-tip-title {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .study-tip p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.85;
+      color: #475569;
+    }
+
+    .footer-msg {
+      text-align: center;
+      margin-top: 22px;
+      font-size: 15px;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    @media (max-width: 1080px) {
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .wrap {
+        padding: 20px 14px 40px;
+      }
+
+      .hero {
+        padding: 28px 22px;
+        border-radius: 24px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero-subtitle {
+        font-size: 19px;
+      }
+
+      .hero-desc {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 22px 18px;
+        border-radius: 22px;
+      }
+
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .section-title {
+        font-size: 24px;
+      }
+
+      .card-title {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="hero-top">중간고사 대비 아카이브</div>
+      <h1>청원고 <span class="accent">중간고사 대비</span> 사이트</h1>
+      <div class="hero-subtitle">2학년 1학기 생명과학 시험범위 정리</div>
+      <div class="hero-desc">
+        교과서 기반으로 정리한 페이지입니다. 학습지는 포함되어 있지 않으니 따로 공부가 필요합니다.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-header-left">
+          <div class="section-number">01</div>
+          <div>
+            <h2 class="section-title">기본 자료</h2>
+            <div class="section-sub">교과서 시험범위를 정리한 페이지</div>
+          </div>
+        </div>
+        <div class="section-badge">PDF</div>
+      </div>
+
+      <div class="grid grid-3">
+        <a class="card card-pdf" href="cw2-bs01.html" target="_blank">
+          <div class="card-left">
+            <div class="icon-box">📄</div>
+            <div class="card-text">
+              <div class="card-title">교과서 시험범위 정리 내용(웹 페이지 상단 탭별 정리내용 확인 가능)</div>
+              <div class="card-desc">교과서 시험범위 개념 정리본</div>
+            </div>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="card card-pdf" href="cw2-bs02.html" target="_blank">
+          <div class="card-left">
+            <div class="icon-box">📄</div>
+            <div class="card-text">
+              <div class="card-title">★★★ 매우중요 ★★★ 청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료</div>
+              <div class="card-desc">기출문제 분석자료<div class="hero-subtitle">2학년 1학기 생명과학 시험범위 정리</div>
+      <div class="hero-desc">
+        교과서 기반으로 정리한 페이지입니다. 학습지는 포함되어 있지 않으니 따로 공부가 필요합니다.
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="section-header-left">
+          <div class="section-number">01</div>
+          <div>
+            <h2 class="section-title">기본 자료</h2>
+            <div class="section-sub">교과서 시험범위를 정리한 페이지</div>
+          </div>
+        </div>
+        <div class="section-badge">PDF</div>
+      </div>
+
+      <div class="grid grid-3">
+        <a class="card card-pdf" href="cw2-bs01.html" target="_blank">
+          <div class="card-left">
+            <div class="icon-box">📄</div>
+            <div class="card-text">
+              <div class="card-title">교과서 시험범위 정리 내용(웹 페이지 상단 탭별 정리내용 확인 가능)</div>
+              <div class="card-desc">교과서 시험범위 개념 정리본</div>
+            </div>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+
+        <a class="card card-pdf" href="cw2-bs02.html" target="_blank">
+          <div class="card-left">
+            <div class="icon-box">📄</div>
+            <div class="card-text">
+              <div class="card-title">★★★ 매우중요 ★★★ 청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료</div>
+              <div class="card-desc">기출문제 분석자료</div>
+            </div>
+          </div>
+          <div class="arrow">›</div>
+        </a>
+      </div>
+    </section>
+
+
+
+    <section class="study-tip">
+      <h3 class="study-tip-title">추천 공부 순서</h3>
+      <p>
+        기본 자료로 시험범위를 먼저 확인한 뒤, 내용에 대해서 명확하게 확인한 후
+        3개년 동안의 청원고 생명과학 과목의 기출분석 자료를 확인합니다. 
+      </p>
+    </section>
+
+    <div class="footer-msg">“예수께서 즉시 이르시되 안심하라 나니 두려워하지 말라”(마14:27) - 전능하신 하나님 더욱 높임 받으소서.</div>
+
+  </div>
+</body>
+</html>
