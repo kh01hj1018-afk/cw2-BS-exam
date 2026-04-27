@@ -330,10 +330,16 @@
 
     .footer-msg {
       text-align: center;
-      margin-top: 22px;
-      font-size: 15px;
-      color: #64748b;
-      font-weight: 600;
+      margin: 0 0 28px 0;
+      padding: 22px 20px;
+      font-size: 17px;
+      line-height: 1.9;
+      color: #334155;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #dbe4f0;
+      border-radius: 22px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
     }
 
     @media (max-width: 1080px) {
@@ -390,10 +396,127 @@
         font-size: 17px;
       }
     }
+
+    .important-section {
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #fecaca;
+      background:
+        linear-gradient(135deg, rgba(254, 242, 242, 0.98) 0%, rgba(255, 255, 255, 0.96) 48%, rgba(255, 247, 237, 0.98) 100%);
+      box-shadow: 0 18px 40px rgba(185, 28, 28, 0.14);
+    }
+
+    .important-section::before {
+      content: "필수 확인";
+      position: absolute;
+      top: 18px;
+      right: -42px;
+      width: 170px;
+      padding: 8px 0;
+      transform: rotate(34deg);
+      background: #b91c1c;
+      color: #ffffff;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.02em;
+      box-shadow: 0 8px 18px rgba(185, 28, 28, 0.24);
+    }
+
+    .important-section .section-number {
+      background: #b91c1c;
+      border-color: #b91c1c;
+      color: #ffffff;
+      box-shadow: 0 10px 22px rgba(185, 28, 28, 0.18);
+    }
+
+    .important-section .section-title {
+      color: #991b1b;
+    }
+
+    .important-section .section-sub {
+      color: #7f1d1d;
+      font-weight: 700;
+    }
+
+    .important-section .section-badge {
+      background: #fee2e2;
+      border-color: #fecaca;
+      color: #991b1b;
+      font-weight: 900;
+    }
+
+    .important-card {
+      position: relative;
+      overflow: hidden;
+      border: 1.5px solid #fca5a5;
+      background: #ffffff;
+      box-shadow: 0 14px 30px rgba(185, 28, 28, 0.12);
+    }
+
+    .important-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 8px;
+      height: 100%;
+      background: linear-gradient(180deg, #dc2626, #f97316);
+    }
+
+    .important-label {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 7px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .important-title {
+      color: #111827;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .important-desc {
+      color: #7f1d1d;
+      font-weight: 800;
+    }
+
+    .important-icon {
+      background: #fff1f2;
+      border-color: #fecaca;
+      color: #b91c1c;
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .important-arrow {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: #b91c1c;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 16px rgba(185, 28, 28, 0.18);
+    }
+
   </style>
 </head>
 <body>
   <div class="wrap">
+    <div class="footer-msg">
+      "예수께서 즉시 이르시되 안심하라 나니 두려워하지 말라"(마14:27)<br>
+      "전능하신 하나님 더욱 높임 받으소서"<br>
+      "주님이 주신 지혜와 명철로 공부하게 하옵소서"
+    </div>
+
 
     <section class="hero">
       <div class="hero-top">중간고사 대비 아카이브</div>
@@ -413,80 +536,58 @@
             <div class="section-sub">교과서 시험범위를 정리한 페이지</div>
           </div>
         </div>
-        <div class="section-badge">PDF</div>
+        
       </div>
 
-      <div class="grid grid-3">
+      <div class="grid grid-2">
         <a class="card card-pdf" href="cw2-bs01.html" target="_blank">
           <div class="card-left">
             <div class="icon-box">📄</div>
             <div class="card-text">
-              <div class="card-title">교과서 시험범위 정리 내용(웹 페이지 상단 탭별 정리내용 확인 가능)</div>
-              <div class="card-desc">교과서 시험범위 개념 정리본</div>
+              <div class="card-title">교과서 시험범위 정리 내용</div>
+              <div class="card-desc">웹 페이지 상단 탭별 정리내용 확인 가능</div>
             </div>
           </div>
           <div class="arrow">›</div>
         </a>
-
-        <a class="card card-pdf" href="cw2-bs02.html" target="_blank">
-          <div class="card-left">
-            <div class="icon-box">📄</div>
-            <div class="card-text">
-              <div class="card-title">★★★ 매우중요 ★★★ 청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료</div>
-              <div class="card-desc">기출문제 분석자료<div class="hero-subtitle">2학년 1학기 생명과학 시험범위 정리</div>
-      <div class="hero-desc">
-        교과서 기반으로 정리한 페이지입니다. 학습지는 포함되어 있지 않으니 따로 공부가 필요합니다.
       </div>
     </section>
 
-    <section class="section">
+    <section class="section important-section">
       <div class="section-header">
         <div class="section-header-left">
-          <div class="section-number">01</div>
+          <div class="section-number">02</div>
           <div>
-            <h2 class="section-title">기본 자료</h2>
-            <div class="section-sub">교과서 시험범위를 정리한 페이지</div>
+            <h2 class="section-title">청원고 기출분석</h2>
+            <div class="section-sub">청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료</div>
           </div>
         </div>
-        <div class="section-badge">PDF</div>
+        <div class="section-badge">VERY IMPORTANT</div>
       </div>
 
-      <div class="grid grid-3">
-        <a class="card card-pdf" href="cw2-bs01.html" target="_blank">
+      <div class="grid grid-2">
+        <a class="card card-exam important-card" href="cw2-bs02.html" target="_blank">
           <div class="card-left">
-            <div class="icon-box">📄</div>
+            <div class="icon-box important-icon">!</div>
             <div class="card-text">
-              <div class="card-title">교과서 시험범위 정리 내용(웹 페이지 상단 탭별 정리내용 확인 가능)</div>
-              <div class="card-desc">교과서 시험범위 개념 정리본</div>
+              <div class="important-label">시험 공부 시 체크 필수</div>
+              <div class="important-label">시험 직전 반드시 확인</div>
+              <div class="card-title important-title">청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료(오답유도 패턴 정리)</div>
+              <div class="card-desc important-desc">출제 경향 · 반복 개념 · 선지 함정 분석</div>
             </div>
           </div>
-          <div class="arrow">›</div>
-        </a>
-
-        <a class="card card-pdf" href="cw2-bs02.html" target="_blank">
-          <div class="card-left">
-            <div class="icon-box">📄</div>
-            <div class="card-text">
-              <div class="card-title">★★★ 매우중요 ★★★ 청원고 3개년(2023~2025) 총 6회의 기출문제 분석자료</div>
-              <div class="card-desc">기출문제 분석자료</div>
-            </div>
-          </div>
-          <div class="arrow">›</div>
+          <div class="arrow important-arrow">›</div>
         </a>
       </div>
     </section>
-
-
 
     <section class="study-tip">
       <h3 class="study-tip-title">추천 공부 순서</h3>
       <p>
         기본 자료로 시험범위를 먼저 확인한 뒤, 내용에 대해서 명확하게 확인한 후
-        3개년 동안의 청원고 생명과학 과목의 기출분석 자료를 확인합니다. 
+        3개년 동안의 청원고 생명과학 과목의 기출분석 자료를 확인합니다.
       </p>
     </section>
-
-    <div class="footer-msg">“예수께서 즉시 이르시되 안심하라 나니 두려워하지 말라”(마14:27) - 전능하신 하나님 더욱 높임 받으소서.</div>
 
   </div>
 </body>
